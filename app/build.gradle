@@ -1,0 +1,31 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+android {
+    namespace 'com.example.raspisnoypoker'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.example.raspisnoypoker"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    kotlinOptions { jvmTarget = '17' }
+    buildTypes {
+        debug {}
+    }
+}
+dependencies {
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.compose.ui:ui:1.6.0'
+    implementation 'androidx.compose.material:material:1.6.0'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
+    implementation 'androidx.activity:activity-compose:1.8.0'
+    implementation 'com.google.firebase:firebase-database-ktx:22.1.2'
+    implementation 'com.google.firebase:firebase-auth-ktx:22.4.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0'
+}
+apply plugin: 'com.google.gms.google-services'
